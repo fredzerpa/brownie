@@ -18,10 +18,9 @@ footer ul a {
     font-size: 1.5em;
 }
 
-@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
 body {
     font-family: 'Poppins', sans-serif;
-    background: #fafafa;
+    background: #fff;
 }
 
 p {
@@ -66,11 +65,6 @@ a:focus {
     SIDEBAR STYLE
 ----------------------------------------------------- */
 
-.wrapper {
-    display: flex;
-    width: 100%;
-}
-
 #sidebar {
     width: 250px;
     position: fixed;
@@ -81,15 +75,21 @@ a:focus {
     background: #7386D5;
     color: #fff;
     transition: all 0.3s;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
 }
 
 #sidebar.active {
     margin-left: -250px;
+    box-shadow: none;
 }
 
 #sidebar .sidebar-header {
     padding: 20px;
     background: #6d7fcc;
+}
+
+#sidebar #dismiss {
+    display: none;
 }
 
 #sidebar ul.components {
@@ -113,9 +113,9 @@ a:focus {
     background: #fff;
 }
 
-#sidebar ul li.active>a,
+#sidebar ul li.active > a, /* Active Link at Sidebar */
 a[aria-expanded="true"] {
-    color: #fff;
+    color: red;
     background: #6d7fcc;
 }
 
@@ -131,33 +131,8 @@ a[data-toggle="collapse"] {
     transform: translateY(-50%);
 }
 
-ul ul a {
-    font-size: 0.9em !important;
-    padding-left: 30px !important;
-    background: #6d7fcc;
-}
-
-ul.CTAs {
-    padding: 20px;
-}
-
-ul.CTAs a {
-    text-align: center;
-    font-size: 0.9em !important;
-    display: block;
-    border-radius: 5px;
-    margin-bottom: 5px;
-}
-
-a.download {
-    background: #fff;
-    color: #7386D5;
-}
-
-a.article,
-a.article:hover {
-    background: #6d7fcc !important;
-    color: #fff !important;
+.overlay.active {
+    display: none;
 }
 
 /* ---------------------------------------------------
@@ -178,24 +153,80 @@ a.article:hover {
     width: 100%;
 }
 
+#navbarSupportedContent #searchHelp {
+    display: none;
+}
+
+#content .container-fluid button {
+    font-size: 1.25rem;
+}
+
 /* ---------------------------------------------------
     MEDIAQUERIES
 ----------------------------------------------------- */
 
 @media (max-width: 768px) {
     #sidebar {
-        margin-left: -250px;
+        left: -250px;
+        overflow-y: scroll;
+        box-shadow: none;
     }
+    
     #sidebar.active {
-        margin-left: 0;
+        left: 0;
+        margin-left: 0px;
     }
-    #content {
-        width: 100%;
+    
+    #sidebar.active #dismiss {
+        display: initial;
+        transition: all 0.3s; 
+        background-position: -132px -173px;
+        right: 8vw;
+        top: 40px;
+        position: fixed;
+        width: 20px;
+        height: 20px;
+        font-size: 1.2rem;
     }
-    #content.active {
-        width: calc(100% - 250px);
+    
+    #sidebar #dismiss:hover {
+        background: #fff;
+        color: #7386D5;
     }
+    
+    .overlay {
+        display: none;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: 998;
+        opacity: 0;
+        transition: all 0.5s ease-in-out;
+    }
+    .overlay.active {
+        display: block;
+        opacity: 1;
+    }
+
+    
     #sidebarCollapse span {
         display: none;
     }
+    
+    #content {
+        width: 100%;
+        padding: 20px;
+    }
+
+
+
+    #navbarSupportedContent {
+        margin-top: 1em;
+    }
+
+    #navbarSupportedContent #searchHelp {
+        display: initial;
+    }
+    
 }
