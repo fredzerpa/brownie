@@ -157,7 +157,7 @@ a[data-toggle="collapse"] {
     display: none;
 }
 
-#content .container-fluid button {
+#content .container-fluid > button {
     font-size: 1.25rem;
 }
 
