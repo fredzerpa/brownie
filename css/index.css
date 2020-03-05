@@ -1,0 +1,24 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url("../images/background.jpg") no-repeat center fixed;
+    background-color: rgba(173, 48, 48, 0.2);
+    background-size: cover;
+    font-family: sans-serif;
+}
+
+
+img {
+    max-height: 250px;
+}
+
+footer {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+footer ul a {
+    font-size: 1.5em;
+}
