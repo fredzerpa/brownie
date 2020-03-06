@@ -5,7 +5,6 @@ html, body {
 
 body {
     background: url("../images/background.jpg") no-repeat center fixed;
-    background-color: rgba(173, 48, 48, 0.2);
     background-size: cover;
     font-family: sans-serif;
 }
