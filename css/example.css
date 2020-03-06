@@ -28,15 +28,19 @@ footer li a  {
 
     #sidebar.active #dismiss {
         display: flex;
+        align-items: center;
+        justify-content: center;
         z-index: 1000;
         transition: all 0.3s; 
         background-position: -132px -173px;
         right: 8vw;
         top: 40px;
         position: fixed;
-        width: 20px;
-        height: 20px;
+        width: 30px;
+        height: 30px;
         font-size: 1.2rem;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, .25);
     }
     
     #sidebar #dismiss:hover {
