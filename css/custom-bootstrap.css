@@ -8177,7 +8177,9 @@ h1, h2, h3, h4, h5,
   width: 100%; }
 
 #sidebar {
+  display: flex;
   z-index: 999;
+  flex-flow: column;
   min-width: 300px;
   max-width: 300px;
   background: #32373d;
