@@ -8,14 +8,41 @@
 
 footer {
     background: rgba(0, 0, 0, 0.1);
-    
+    margin-top: auto;
 }
 
 footer li a  {
     font-size: 1.5em;
+    
+}
+
+.overlay.active {
+    display: none;
+}
+
+#sidebar #dismiss {
+    display: none;
 }
 
 @media (max-width: 768px) {
+
+    #sidebar.active #dismiss {
+        display: flex;
+        transition: all 0.3s; 
+        background-position: -132px -173px;
+        right: 8vw;
+        top: 40px;
+        position: fixed;
+        width: 20px;
+        height: 20px;
+        font-size: 1.2rem;
+    }
+    
+    #sidebar #dismiss:hover {
+        background: #fff;
+        color: #7386D5;
+    }
+    
 
     #navbarSupportedContent {
         margin-top: 1em;
@@ -24,4 +51,21 @@ footer li a  {
     #navbarSupportedContent #searchHelp {
         display: initial;
     }
+    
+    .overlay {
+        display: none;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: 998;
+        opacity: 0;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .overlay.active {
+        display: block;
+        opacity: 1;
+    }
+
 }

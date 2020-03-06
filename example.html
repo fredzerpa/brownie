@@ -19,17 +19,17 @@
     
     <div class="wrapper d-flex align-items-stretch">
         <nav id="sidebar">
-            <!-- <div class="custom-menu">
-                <button type="button" id="sidebarCollapse" class="btn btn-primary">
-                </button>
-            </div> -->
+            <div id="dismiss">
+                <i class="fas fa-arrow-left"></i>
+            </div>
+
             <div class="img bg-wrap text-center py-4" style="background-image: url(images/bg_1.jpg);">
                 <div class="user-logo">
                     <div class="img" style="background-image: url(images/logo.jpg);"></div>
                     <h3>Catriona Henderson</h3>
                 </div>
             </div>
-            <ul class="list-unstyled components mb-5">
+            <ul class="list-unstyled components">
                 <li class="active">
                     <a href="#"><span class="fa fa-home mr-3"></span> Home</a>
                 </li>
@@ -52,7 +52,37 @@
                     <a href="#"><span class="fa fa-sign-out mr-3"></span> Sign Out</a>
                 </li>
             </ul>
-
+            <!-- Footer -->
+            <footer class="page-footer font-small special-color-dark py-2">
+            
+                <!-- Footer Elements -->
+                <div class="container">
+                    
+                    <!-- Social buttons -->
+                    <ul class="list-unstyled list-inline text-center my-0">
+                        <li class="list-inline-item">
+                            <a class="btn-floating btn-whatsapp mx-1" href="https://api.whatsapp.com/send?phone=+584248570022">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="btn-floating btn-github mx-1" href="https://github.com/fredzerpa">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="btn-floating btn-li mx-1">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- Social buttons -->
+            
+                </div>
+                <!-- Footer Elements -->
+            
+            </footer>
+            <!-- Footer -->
         </nav>
 
             <!-- Page Content  -->
@@ -74,9 +104,9 @@
                                 <form id="search-form" method="GET" action="record.html" class="">
                                     <div class="form-group text-center" style="margin-bottom: 0;">
                                         <div class="input-group">
-                                            <input type="search" class="form-control" id="searchClerk" name="clerk" aria-label="Search Clerk" aria-describedby="search-btn">
+                                            <input type="search" class="form-control border" id="searchClerk" name="clerk" aria-label="Search Clerk" aria-describedby="search-btn">
                                             <div class="input-group-append">
-                                                <button class="btn btn-outline-danger" type="submit" id="submit-search"><i class="fas fa-search"></i></button>
+                                                <button class="btn btn-outline-info" type="submit" id="submit-search"><i class="fas fa-search"></i></button>
                                             </div>
                                         </div>
                                     </div>
@@ -100,9 +130,9 @@
             </div>
         </div>
         
+        <div class="overlay"></div>
     </div>
 
-    <div class="overlay"></div>
     
     <!-- Bootstrap Scripts -->
     <script src="./js/jquery-3.4.1.slim.min.js"></script>
@@ -121,7 +151,7 @@
             });
 
             $('#sidebarCollapse').on('click', function () {
-                $('#sidebar, #content').toggleClass('active');
+                $('#sidebar').toggleClass('active');
                 $('.overlay').addClass('active');
                 $('.collapse.in').toggleClass('in');
                 $('a[aria-expanded=true]').attr('aria-expanded', 'false');

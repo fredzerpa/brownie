@@ -8177,6 +8177,9 @@ h1, h2, h3, h4, h5,
   width: 100%; }
 
 #sidebar {
+  display: flex;
+  z-index: 999;
+  flex-flow: column;
   min-width: 300px;
   max-width: 300px;
   background: #32373d;
@@ -8206,22 +8209,18 @@ h1, h2, h3, h4, h5,
       display: block;
       padding: 10px 30px;
       background: #2f89fc; }
-  #sidebar ul.components {
+  #sidebar ul:not(:last-child).components {
     padding: 0; }
-  #sidebar ul li {
+  #sidebar ul:not(:last-child) li {
     font-size: 16px; }
-    #sidebar ul li > ul {
-      margin-left: 10px; }
-      #sidebar ul li > ul li {
-        font-size: 14px; }
-    #sidebar ul li a {
+    #sidebar ul:not(:last-child) li a {
       padding: 15px 30px;
       display: block;
       color: rgba(255, 255, 255, 0.6);
       border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
-      #sidebar ul li a span.notif {
+      #sidebar ul:not(:last-child) li a span.notif {
         position: relative; }
-        #sidebar ul li a span.notif small {
+        #sidebar ul:not(:last-child) li a span.notif small {
           position: absolute;
           top: -3px;
           bottom: 0;
@@ -8233,24 +8232,29 @@ h1, h2, h3, h4, h5,
           border-radius: 50%;
           font-family: "Poppins", Arial, sans-serif;
           font-size: 8px; }
-      #sidebar ul li a:hover {
+      #sidebar ul:not(:last-child) li a:hover {
         color: #fff;
         background: #2f89fc;
         border-bottom: 1px solid #2f89fc; }
-    #sidebar ul li.active > a {
+    #sidebar ul:not(:last-child) li.active > a {
       background: transparent;
       color: #fff; }
-      #sidebar ul li.active > a:hover {
+      #sidebar ul:not(:last-child) li.active > a:hover {
         background: #2f89fc;
         border-bottom: 1px solid #2f89fc; }
   @media (max-width: 991.98px) {
     #sidebar {
-      margin-left: -300px; }
-      #sidebar.active {
-        margin-left: 0; }
-      #sidebar .custom-menu {
-        margin-right: -60px !important;
-        top: 10px !important; } }
+      margin-left: -300px;
+      overflow-y: scroll;
+      height: 100vh;
+      position: fixed;
+    }
+    #sidebar.active {
+      margin-left: 0; }
+    #sidebar .custom-menu {
+      margin-right: -60px !important;
+      top: 10px !important; }
+  }
   #sidebar .custom-menu {
     display: inline-block;
     position: absolute;
