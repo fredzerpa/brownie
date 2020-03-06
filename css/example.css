@@ -1,0 +1,27 @@
+#navbarSupportedContent #searchHelp {
+    display: none;
+}
+
+#content .container-fluid > button {
+    font-size: 1.25rem;
+}
+
+footer {
+    background: rgba(0, 0, 0, 0.1);
+    
+}
+
+footer li a  {
+    font-size: 1.5em;
+}
+
+@media (max-width: 768px) {
+
+    #navbarSupportedContent {
+        margin-top: 1em;
+    }
+
+    #navbarSupportedContent #searchHelp {
+        display: initial;
+    }
+}
