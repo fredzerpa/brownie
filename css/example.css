@@ -28,6 +28,7 @@ footer li a  {
 
     #sidebar.active #dismiss {
         display: flex;
+        z-index: 999;
         transition: all 0.3s; 
         background-position: -132px -173px;
         right: 8vw;
