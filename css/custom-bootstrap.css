@@ -8187,11 +8187,15 @@ h1, h2, h3, h4, h5,
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
-  position: relative; }
+  position: relative;
+  box-shadow: 0 0 10px #000;
+}
   #sidebar .h6 {
     color: #fff; }
   #sidebar.active {
-    margin-left: -300px; }
+    margin-left: -300px; 
+    box-shadow: none;
+  }
     #sidebar.active .custom-menu {
       margin-right: -50px; }
     #sidebar.active .btn.btn-primary:before {
@@ -8248,6 +8252,7 @@ h1, h2, h3, h4, h5,
       overflow-y: scroll;
       height: 100vh;
       position: fixed;
+      box-shadow: none;
     }
     #sidebar.active {
       margin-left: 0; }

@@ -1,10 +1,20 @@
 body {
-    background: url("../images/fondo.jpg") no-repeat center fixed;
+    background: url("../images/black-cafe.jpg") no-repeat center fixed;
     background-size: cover;
 }
 
 #navbarSupportedContent #searchHelp {
     display: none;
+}
+
+#content {
+    box-shadow: 0 0 10px #000;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#content > .navbar-section + .container {
+    background-color: white;
+    width: auto;
 }
 
 #content .container-fluid > button {
@@ -28,6 +38,8 @@ footer li a  {
 #sidebar #dismiss {
     display: none;
 }
+
+
 
 
 /* Overriding Bootstrap CSS */
@@ -57,12 +69,15 @@ footer li a  {
         background-color: rgba(255, 255, 255, .25);
         box-shadow: 0px 0px 5px #000;
     }
+
+    #content > .navbar-section + .container {
+        height: initial;
+    }
     
     #sidebar #dismiss:hover {
         background: #fff;
         color: #7386D5;
     }
-    
 
     #navbarSupportedContent {
         margin-top: 1em;
@@ -88,4 +103,11 @@ footer li a  {
         opacity: 1;
     }
 
+}
+
+
+@media (min-width: 768px) {
+    #content > .navbar-section + .container {
+        height: calc(100vh - 60px - 6rem);
+    }
 }
