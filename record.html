@@ -7,12 +7,11 @@
 
     <!-- FontAwesome CSS || Icons -->
     <link rel="stylesheet" href="./css/all.min.css">
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="./css/jquery.mCustomScrollbar.min.css">
     <!-- This page CSS -->
     <link rel="stylesheet" href="./css/custom-bootstrap.css">
     <link rel="stylesheet" href="./css/record.css">
-    
-    <!-- Scrollbar Custom CSS -->
-    <link rel="stylesheet" href="./jquery.mCustomScrollbar.min.css">
 
     <title>Welcome to BronwieFest!</title>
     
@@ -304,6 +303,93 @@
                           </tr>
                         </tbody>
                     </table>
+                    <table class="table table-bordered table-hover text-center bg-white">
+                        <thead>
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">First</th>
+                            <th scope="col">Last</th>
+                            <th scope="col">Handle</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td colspan="2">Larry the Bird</td>
+                            <td>@twitter</td>
+                          </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-bordered table-hover text-center bg-white">
+                        <thead>
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">First</th>
+                            <th scope="col">Last</th>
+                            <th scope="col">Handle</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td colspan="2">Larry the Bird</td>
+                            <td>@twitter</td>
+                          </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-bordered table-hover text-center bg-white">
+                        <thead>
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">First</th>
+                            <th scope="col">Last</th>
+                            <th scope="col">Handle</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td colspan="2">Larry the Bird</td>
+                            <td>@twitter</td>
+                          </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
@@ -318,15 +404,17 @@
     <script src="./js/bootstrap.min.js"  ></script>
     <!-- FontAwesome Script || Icons -->
     <script src="./js/all.min.js"></script>
-    <script src="./jquery.mCustomScrollbar.concat.min.js"></script>
     <!-- This Page Js -->
     <script src="./js/main.js"></script>
+    <!-- jQuery Custom Scroller CDN -->
+    <script src="./js/jquery.mCustomScrollbar.concat.min.js"></script>
 
     <script type="text/javascript">
         $(document).ready(function () {
-            $("#sidebar, #data").mCustomScrollbar({
+            $("#data").mCustomScrollbar({
                 theme: "minimal"
             });
+
             $('#dismiss, .overlay').on('click', function () {
                 $('#sidebar').removeClass('active');
                 $('.overlay').removeClass('active');

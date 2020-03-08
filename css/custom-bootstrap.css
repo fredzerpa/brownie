@@ -2530,8 +2530,7 @@ input[type="button"].btn-block {
   white-space: nowrap; }
   .dropdown-toggle::after {
     display: inline-block;
-    margin-left: 0.255em;
-    vertical-align: 0.255em;
+    margin-left: 0.4em;
     content: "";
     border-top: 0.3em solid;
     border-right: 0.3em solid transparent;
@@ -8322,10 +8321,6 @@ a[data-toggle="collapse"] {
   position: relative; }
 
 .dropdown-toggle::after {
-  display: block;
-  position: absolute;
-  top: 50%;
-  right: 0;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%); }
