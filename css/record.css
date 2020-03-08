@@ -12,9 +12,9 @@ body {
     background: rgba(0, 0, 0, 0.5);
 }
 
-#content > .navbar-section + .container {
-    background-color: white;
+#data {
     width: auto;
+    background-color: rgba(255, 255, 255, .25);
 }
 
 #content .container-fluid > button {
@@ -37,6 +37,10 @@ footer li a  {
 
 #sidebar #dismiss {
     display: none;
+}
+
+#settingsMenu {
+    background: #1b232d;
 }
 
 
@@ -107,7 +111,7 @@ footer li a  {
 
 
 @media (min-width: 768px) {
-    #content > .navbar-section + .container {
+    #data {
         height: calc(100vh - 60px - 6rem);
     }
 }
