@@ -11,9 +11,9 @@ body {
 
 #dataBox {
     background: rgba(0, 0, 0, 0.5);
-    border: 4px double rgb(70, 70, 70);
+    border: 6px double rgb(83, 83, 83);
     color: white;
-    box-shadow: 0 0 3px rgb(100, 100, 100);
+    box-shadow: 0 0 15px rgb(0, 0, 0);
     
 }
 
@@ -27,9 +27,14 @@ img {
 }
 
 footer {
-    background: rgba(0, 0, 0, 0.25);
+    background: rgba(0, 0, 0, 0.5);
 }
 
 footer ul a {
+    color: white;
     font-size: 1.5em;
+}
+
+footer ul a:hover {
+    color: rgb(124, 124, 124);
 }
