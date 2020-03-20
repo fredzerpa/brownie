@@ -74,13 +74,12 @@ footer li a  {
 #sidebar .h6 {
     color: #fff;
 }
+
 #sidebar.active {
     margin-left: -300px; 
     box-shadow: none;
 }
-#sidebar.active .custom-menu {
-    margin-right: -50px; 
-}
+
 #sidebar.active .btn.btn-primary:before {
     content: "\f054";
     font-family: "FontAwesome";
@@ -89,6 +88,7 @@ footer li a  {
 #sidebar.active .btn.btn-primary:after {
     display: none; 
 }
+
 #sidebar h1 {
     margin-bottom: 20px;
     font-weight: 700;
@@ -142,6 +142,10 @@ footer li a  {
     background: #2f89fc;
     border-bottom: 1px solid #2f89fc; 
 }
+
+#sidebar ul .dropdown-toggle::after{
+    vertical-align: unset;
+}
 @media (max-width: 991.98px) {
     #sidebar {
         margin-left: -300px;
@@ -154,57 +158,9 @@ footer li a  {
         margin-left: 0;
     }
 
-    #sidebar .custom-menu {
-        margin-right: -60px !important;
-        top: 10px !important;
-    }
-
     #sidebarCollapse span {
         display: none;
     }
-}
-
-#sidebar .custom-menu {
-    display: inline-block;
-    position: absolute;
-    top: 20px;
-    right: 0;
-    margin-right: -35px;
-    -webkit-transition: 0.3s;
-    -o-transition: 0.3s;
-    transition: 0.3s;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    #sidebar .custom-menu {
-        -webkit-transition: none;
-        -o-transition: none;
-        transition: none; 
-    }
-}
-
-#sidebar .custom-menu .btn.btn-primary {
-        background: #2f89fc;
-        border-color: transparent;
-        position: relative;
-        color: #000;
-        width: 30px;
-        height: 30px; 
-}
-
-#sidebar .custom-menu .btn.btn-primary:after, #sidebar .custom-menu .btn.btn-primary:before {
-    position: absolute;
-    top: 2px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    font-family: "FontAwesome";
-    color: #fff; 
-}
-
-#sidebar .custom-menu .btn.btn-primary:after {
-    content: "\f053";
-    right: 2px; 
 }
   
 .bg-wrap {
@@ -228,7 +184,6 @@ footer li a  {
 .bg-wrap .user-logo .img {
     width: auto;
     height: 150px;
-    /* border-radius: 50%; */
     margin: 0 auto;
     background-size: contain;
     margin-bottom: 10px;
