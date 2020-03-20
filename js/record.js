@@ -1,6 +1,6 @@
 // JQuery Section
 $(document).ready(function () { // Sidebar Toggle Class and Content ScrollBar
-    $("#data").mCustomScrollbar({ // Thin scrollbar
+    $("#data, .modal-body").mCustomScrollbar({ // Thin scrollbar
         theme: "minimal"
     });
 
